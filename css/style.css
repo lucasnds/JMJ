@@ -143,10 +143,16 @@
         height: 100%;
     }
     
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
     html {
         font-size: 62.5%;
         font-family: "Raleway";
         box-sizing: border-box;
+        scroll-behavior: smooth;
     }
     
     main {
@@ -172,13 +178,20 @@
     h3 {
         color: #D63F31;
         font-size: 1.8rem;
-        margin: 1.0rem 0 1.0rem 1.0rem;
+        margin: 1.0rem;
     }
     
     p {
         font-size: 1.6rem;
         color: #000;
         text-align: justify;
+        margin: 5px 0px;
+    }
+    
+    @media(min-width:280px) and (max-width:768px) {
+        p {
+            margin: 5px 20px;
+        }
     }
     
     .grid {
@@ -240,8 +253,10 @@
     
     form h5 {
         font-weight: 600;
-        margin-left: 180px;
         margin-bottom: 40px;
+        margin-top: 25px;
+        text-align: center;
+        font-size: 2.0rem;
     }
     
     .formualrio {
@@ -258,21 +273,18 @@
         flex-direction: column;
         width: 100%;
         background-color: #D9D9D9;
+        margin-bottom: -100px;
     }
-    /* .row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-    width: 50%;
-} */
     
     label {
         color: black;
         font-size: 1.3rem;
-        font-weight: 500;
-        margin-left: 270px;
+        font-weight: 600;
+        margin: 0px auto;
         margin-top: 15px;
+        margin-bottom: 3px;
+        width: 80%;
+        font-style: bold;
     }
     
     input {
@@ -281,8 +293,9 @@
         outline: 0;
         border-radius: 4px;
         font-family: "Raleway";
-        width: 60%;
+        width: 80%;
         margin: 0 auto;
+        font-size: 1.2rem;
     }
     
     input:focus {
@@ -295,7 +308,7 @@
         border-radius: 4px;
         font-family: "Raleway";
         padding: 5px 5px 40px 5px;
-        width: 60%;
+        width: 80%;
         margin: 0 auto;
     }
     
@@ -305,14 +318,13 @@
     
     button {
         border: 0;
-        padding: 10px 20px;
+        padding: 10px 35px;
         border-radius: 4px;
         background-color: #00E378;
         color: #fff;
         font-weight: 600;
         cursor: pointer;
         margin: 20px auto;
-        width: 10%;
     }
     
     button:hover {
@@ -385,10 +397,14 @@
     }
     
     footer h6 {
-        color: #fff;
         font-size: 1.3rem;
         font-weight: 400;
         text-align: center;
         padding: 20px;
         margin: 0;
+        color: #fff;
+    }
+    
+    h6 a {
+        color: #fff;
     }

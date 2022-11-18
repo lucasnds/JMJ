@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JMJ - Missão</title>
     <link rel="stylesheet" href="css/missao.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+
 </head>
 
 <body>
@@ -25,7 +27,7 @@
                         <a href="index.html">HOME</a>
                     </li>
                     <li>
-                        <a href="#">CONTATO</a>
+                        <a href="#formulario">CONTATO</a>
                     </li>
                     <li>
                         <a href="#pix">DOAÇÕES</a>
@@ -80,7 +82,22 @@
             <img src="./img/qrcode.png" alt="QRcode" id="qrcode">
         </div>
     </section>
-    <!-- <form action=""></form> -->
+    <section id="formulario">
+        <form action="https://api.staticforms.xyz/submit" method="post">
+            <h5>Entre em contato:</h5>
+
+            <label>Nome</label>
+            <input type="text" name="nome" placeholder="Digite seu nome" autocomplete="off">
+            <label>E-mail</label>
+            <input type="email" name="email" placeholder="Digite seu e-mail" autocomplete="off">
+            <label>Mensagem</label>
+            <textarea name="message" placeholder="Digite uma mensagem"></textarea>
+            <button type="submit">Enviar</button>
+
+            <input type="hidden" name="accessKey" value="1585149f-e93f-4816-aec3-e27e606062ad">
+            <input type="hidden" name="redirectTo" value="https://example.com/contact/success">
+        </form>
+    </section>
     <section class="sub-footer">
         <div class="gridSubFooter">
             <div> <img src="./img/brasaopnsf.png" alt="Brasão da Paróquia">
@@ -127,7 +144,7 @@
 
     </section>
     <footer>
-        <h6>Lucas Nascimento Developer 2022</h6>
+        <h6><a href="https://www.linkedin.com/in/lucas-silva-9473b8208/" target="_blank">Lucas Nascimento Developer © 2022</a></h6>
     </footer>
 </body>
 
