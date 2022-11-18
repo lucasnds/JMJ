@@ -339,11 +339,6 @@
         display: flex;
         align-items: center;
     }
-    /* @media(min-width:300px) and (max-width:768px) {
-        .gridSubFooter {
-            text-align: center;
-        }
-    } */
     /* Forms */
     
     form h5 {
@@ -431,11 +426,7 @@
         font-size: 1.5rem;
         font-weight: 500;
         margin: 0;
-    }
-    
-    .gridSubFooter h6>span {
-        font-size: 1.6rem;
-        font-weight: 600;
+        color: #000000;
     }
     
     .gridSubFooter {
