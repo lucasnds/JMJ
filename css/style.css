@@ -104,9 +104,8 @@
             margin-top: 150px;
             left: 0;
             flex-direction: column;
-            width: 90%;
+            width: 100%;
             align-items: center;
-            margin-left: 10%;
         }
         #menu-toggle~.menu li {
             height: 0;
