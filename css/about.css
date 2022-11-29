@@ -1,4 +1,26 @@
     @import url(https://fonts.googleapis.com/css?family=Raleway);
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    html {
+        font-size: 62.5%;
+        font-family: "Raleway";
+        scroll-behavior: smooth;
+    }
+    
+    body {
+        margin: 0 auto;
+        padding: 0;
+        height: 100%;
+    }
+    
+    header {
+        width: 100%;
+    }
+    
     ul a {
         text-decoration: none;
         color: #00873E;
@@ -128,7 +150,7 @@
         align-items: center;
         justify-content: space-between;
         padding: 10px;
-        background-color: #FBC112;
+        background-color: #fbc11284;
     }
     
     .top-nav {
@@ -207,7 +229,7 @@
     
     @media (max-width: 820px) {
         li a {
-            padding: 10px 0px;
+            padding: 20px 0px;
         }
         .flex-menu {
             align-items: flex-end;
@@ -229,12 +251,12 @@
             margin: 0;
             padding: 0;
             border: 0;
-            transition: height 400ms cubic-bezier(0.2, 0.5, 0.2, 0.5);
+            transition: height 300ms cubic-bezier(0.2, 0.5, 0.2, 0.5);
         }
         #menu-toggle:checked~.menu li {
-            height: 2.5em;
+            height: 3.5em;
             padding: 0;
-            transition: height 400ms cubic-bezier(0.2, 0.5, 0.2, 0.5);
+            transition: height 300ms cubic-bezier(0.2, 0.5, 0.2, 0.5);
         }
         .menu>li {
             display: flex;
@@ -249,23 +271,11 @@
     }
     /* ------------------- */
     
-    body {
-        margin: 0 auto;
-        padding: 0;
+    main {
+        justify-content: center;
         max-width: 1360px;
-        height: 100%;
-    }
-    
-    html {
-        font-size: 62.5%;
-        font-family: "Raleway";
-        box-sizing: border-box;
-        scroll-behavior: smooth;
-    }
-    
-    * {
-        margin: 0;
-        padding: 0;
+        margin: 0 auto;
+        margin-bottom: 5%;
     }
     
     main h1 {
@@ -290,8 +300,63 @@
         margin: 1.0rem;
     }
     
+    p {
+        font-size: 1.6rem;
+        color: #000;
+        text-align: justify;
+        margin: 5px 10px;
+    }
+    
     .foto-sombra {
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
+    }
+    
+    .container-video {
+        background-color: #00873f9f;
+    }
+    
+    .video {
+        position: relative;
+        padding-bottom: 60%;
+        width: 100%;
+        max-height: 718.75px;
+    }
+    
+    .container-video h2 {
+        text-align: center;
+        font-size: 2.0rem;
+        padding-top: 10px;
+    }
+    
+    @media (min-width:1125px) {
+        .video {
+            padding-bottom: 50%;
+        }
+        .container-video h2 {
+            font-size: 4.0rem;
+        }
+    }
+    
+    .video>iframe {
+        position: absolute;
+        top: 5%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 90%;
+        height: 90%;
+        max-width: 1100px;
+        max-height: 618.75px;
+        margin: 0 auto;
+    }
+    
+    @media (min-width:1650px) {
+        .video {
+            padding-bottom: 40%;
+        }
+        .video>iframe {
+            top: 7%;
+        }
     }
     
     .pix {
@@ -332,7 +397,6 @@
     
     .sub-footer {
         background-color: #d9d9d941;
-        margin-top: 100px;
     }
     
     .flex {
@@ -349,14 +413,6 @@
     }
     /* Forms */
     
-    form h5 {
-        font-weight: 600;
-        margin-bottom: 40px;
-        margin-top: 25px;
-        text-align: center;
-        font-size: 2.0rem;
-    }
-    
     .formualrio {
         display: flex;
         justify-content: center;
@@ -371,7 +427,14 @@
         flex-direction: column;
         width: 100%;
         background-color: #D9D9D9;
-        margin-bottom: -100px;
+    }
+    
+    form h2 {
+        font-weight: 600;
+        margin-bottom: 40px;
+        margin-top: 25px;
+        text-align: center;
+        font-size: 2.0rem;
     }
     
     label {
@@ -383,10 +446,11 @@
         margin-bottom: 3px;
         width: 80%;
         font-style: bold;
+        max-width: 600px;
     }
     
     input {
-        padding: 5px;
+        padding: 10px;
         border: 0;
         outline: 0;
         border-radius: 4px;
@@ -394,6 +458,12 @@
         width: 80%;
         margin: 0 auto;
         font-size: 1.2rem;
+        max-width: 600px;
+    }
+    
+    input::placeholder,
+    textarea::placeholder {
+        font-size: 1.5rem;
     }
     
     input:focus {
@@ -408,6 +478,7 @@
         padding: 5px 5px 40px 5px;
         width: 80%;
         margin: 0 auto;
+        max-width: 600px;
     }
     
     textarea:focus {
@@ -430,33 +501,73 @@
     }
     /* _____________________ */
     
+    .sub-footer {
+        background-color: #d9d9d941;
+    }
+    
+    .flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 10px;
+    }
+    
+    .flex2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .flex-redes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .flex-inline-block {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .a-redes {
+        font-size: 1.3rem;
+        text-align: center;
+        color: #000;
+        margin-left: 10px;
+        text-decoration: none;
+    }
+    
+    .a-redes:hover {
+        text-decoration: underline;
+    }
+    
     .gridSubFooter h6 {
         font-size: 1.5rem;
         font-weight: 500;
         margin: 0;
-        color: #000000;
         text-align: center;
+    }
+    
+    .gridSubFooter h6>span {
+        font-size: 1.6rem;
+        font-weight: 600;
     }
     
     .gridSubFooter {
         display: grid;
         grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
         justify-content: space-between;
-        max-width: 1200px;
         grid-gap: 20px;
         align-items: center;
         margin: 0 auto;
         padding: 15px;
     }
     
-    .flex-redes {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-    }
-    
-    #brasao-paroquia {
+    #brasao {
         text-align: center;
     }
     
