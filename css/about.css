@@ -413,18 +413,11 @@
     }
     /* Forms */
     
-    .formualrio {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        padding: 30px 0px;
-        align-items: center;
-        width: 100%;
-    }
-    
     form {
         display: flex;
         flex-direction: column;
+        /* align-items: center; */
+        justify-content: center;
         width: 100%;
         background-color: #D9D9D9;
     }
@@ -437,28 +430,67 @@
         font-size: 2.0rem;
     }
     
-    label {
-        color: black;
-        font-size: 1.3rem;
-        font-weight: 600;
-        margin: 0px auto;
-        margin-top: 15px;
-        margin-bottom: 3px;
-        width: 80%;
-        font-style: bold;
+    .form-control {
+        position: relative;
+        display: block;
+        height: 90px;
         max-width: 600px;
+        width: 100%;
+        margin: 25px auto;
     }
     
-    input {
-        padding: 10px;
+    @media (max-width:620px) {
+        .form-control {
+            width: 90%;
+        }
+    }
+    
+    form label {
+        color: #000;
+        font-size: 1.5rem;
+        font-weight: 600;
+        width: 100%;
+        font-style: bold;
+        max-width: 600px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+    
+    .form-control input {
+        padding: 13px;
         border: 0;
-        outline: 0;
+        outline: 2px solid #fff;
         border-radius: 4px;
         font-family: "Raleway";
-        width: 80%;
-        margin: 0 auto;
-        font-size: 1.2rem;
-        max-width: 600px;
+        width: 100%;
+        margin-top: 25px;
+        font-size: 1.5rem;
+    }
+    
+    .fa-exclamation-circle {
+        font-size: 1.6rem;
+        position: absolute;
+        left: 0px;
+        top: 75px;
+        visibility: hidden;
+    }
+    
+    .fa-check-circle {
+        font-size: 1.6rem;
+        position: absolute;
+        right: 10px;
+        top: 40px;
+        visibility: hidden;
+    }
+    
+    small {
+        font-size: 1.4rem;
+        visibility: hidden;
+        font-weight: 600;
+        position: absolute;
+        left: 25px;
+        top: 75px;
     }
     
     input::placeholder,
@@ -467,22 +499,40 @@
     }
     
     input:focus {
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        outline: 2px solid #000;
     }
     
     textarea {
+        padding: 13px;
         border: 0;
-        outline: 0;
+        outline: 2px solid #fff;
         border-radius: 4px;
         font-family: "Raleway";
-        padding: 5px 5px 40px 5px;
-        width: 80%;
-        margin: 0 auto;
+        width: 100%;
         max-width: 600px;
+        margin-top: 25px;
+    }
+    
+    #small-area {
+        position: absolute;
+        left: 25px;
+        top: 90px;
+    }
+    
+    #i-area-check {
+        position: absolute;
+        right: 10px;
+        top: 40px;
+    }
+    
+    #i-area-exclamation {
+        position: absolute;
+        left: 0px;
+        top: 90px;
     }
     
     textarea:focus {
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        outline: 2px solid #000;
     }
     
     button {
@@ -497,8 +547,35 @@
     }
     
     button:hover {
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        opacity: 0.8;
     }
+    /* success and error */
+    
+    .form-control.success input,
+    .form-control.success textarea {
+        outline-color: #2ecc71;
+    }
+    
+    .form-control.error input,
+    .form-control.error textarea {
+        outline-color: #e74c3c;
+    }
+    
+    .form-control.success i.fa-check-circle {
+        color: #2ecc71;
+        visibility: visible;
+    }
+    
+    .form-control.error i.fa-exclamation-circle {
+        color: #e74c3c;
+        visibility: visible;
+    }
+    
+    .form-control.error small {
+        visibility: visible;
+        color: #e74c3c;
+    }
+    /* _____________________ */
     /* _____________________ */
     
     .sub-footer {
