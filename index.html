@@ -109,29 +109,50 @@
     </section>
 
     <section id="formulario">
-        <form action="https://api.staticforms.xyz/submit " method="post">
+        <!-- action="https://api.staticforms.xyz/submit" method="post" -->
+        <form id="form">
             <h2>Entre em contato:</h2>
+            <div id="container-forms">
+                <div class="form-control">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <i class="fas fa-check-circle"></i>
+                    <small>Erro</small>
+                </div>
 
-            <label>Nome</label>
-            <input type="text" name="nome" placeholder="Digite seu nome" autocomplete="off">
-            <label>E-mail</label>
-            <input type="email" name="email" placeholder="Digite seu e-mail" autocomplete="off">
-            <label>Mensagem</label>
-            <textarea name="message" placeholder="Digite uma mensagem"></textarea>
+                <div class="form-control">
+                    <label for="email">E-mail</label>
+                    <input type="text" id="email" name="email" placeholder="Digite seu melhor e-mail">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <i class="fas fa-check-circle"></i>
+                    <small>Erro</small>
+                </div>
+
+                <div class="form-control">
+                    <label for="message">Mensagem</label>
+                    <textarea name="message" id="message" placeholder="Digite uma mensagem"></textarea>
+                    <i id="i-area-exclamation" class="fas fa-exclamation-circle"></i>
+                    <i id="i-area-check" class="fas fa-check-circle"></i>
+                    <small id="small-area">Erro</small>
+                </div>
+            </div>
+
+
             <button type="submit">Enviar</button>
 
-            <input type="hidden" name="accessKey" value="1585149f-e93f-4816-aec3-e27e606062ad">
-            <input type="hidden" name="redirectTo" value="https://example.com/contact/success">
+            <!-- <input type="hidden" name="accessKey" value="1585149f-e93f-4816-aec3-e27e606062ad">
+            <input type="hidden" name="redirectTo" value="https://example.com/contact/success"> -->
         </form>
     </section>
-    <section class="sub-footer">
-        <div class="gridSubFooter">
-            <div id="brasao">
-                <img src="./img/brasaopnsf.png" alt="Brasão da Paróquia">
+    <section class="sub-footer ">
+        <div class="gridSubFooter ">
+            <div id="brasao ">
+                <img src="./img/brasaopnsf.png" alt="Brasão da Paróquia ">
             </div>
             <div>
-                <div class="flex2">
-                    <img src="./img/location.svg" alt="Localização">
+                <div class="flex2 ">
+                    <img src="./img/location.svg " alt="Localização ">
                     <h5>Localização:</h5>
                 </div>
                 <h6>Rua Missionário Otto Nelson,<br> S/n - Stella Maris,<br> Salvador-BA, 41600-650
@@ -139,16 +160,16 @@
             </div>
 
             <div>
-                <div class="flex2">
-                    <img src="./img/contact.svg " alt="Contato">
+                <div class="flex2 ">
+                    <img src="./img/contact.svg " alt="Contato ">
                     <h5>Contatos:</h5>
                 </div>
                 <h6>+55 (71) 3249-7159 <br>+55 (71) 99154-5112</h6>
             </div>
 
             <div>
-                <div class="flex2">
-                    <img src="./img/clock.svg " alt="Relógio">
+                <div class="flex2 ">
+                    <img src="./img/clock.svg " alt="Relógio ">
                     <h5>Horário de atendimento:</h5>
                 </div>
                 <h6>Segunda 13h30 às 17h <br> De terça a sexta 8h às 12h30 – 13h30 às 17h <br> Sábado 8 às 12h
@@ -156,19 +177,19 @@
             </div>
 
             <div>
-                <div class="flex-redes">
-                    <div class="flex-inline-block">
-                        <a href="https://www.instagram.com/stellamarisnajmj/" target="_blank"><img src="./img/instagram.svg" alt="Instagram"></a>
-                        <a href="https://www.instagram.com/stellamarisnajmj/" target="_blank" class="a-redes">@stellamarisnajmj</a>
+                <div class="flex-redes ">
+                    <div class="flex-inline-block ">
+                        <a href="https://www.instagram.com/stellamarisnajmj/ " target="_blank "><img src="./img/instagram.svg " alt="Instagram "></a>
+                        <a href="https://www.instagram.com/stellamarisnajmj/ " target="_blank " class="a-redes ">@stellamarisnajmj</a>
                     </div>
-                    <div class="flex-inline-block">
-                        <a href="https://www.instagram.com/pnsfstellamaris/" target="_blank"> <img src="./img/instagram.svg" alt="Instagram"></a>
-                        <a href="https://www.instagram.com/pnsfstellamaris/" target="_blank" class="a-redes">@pnsfstellaaris</a>
+                    <div class="flex-inline-block ">
+                        <a href="https://www.instagram.com/pnsfstellamaris/ " target="_blank "> <img src="./img/instagram.svg " alt="Instagram "></a>
+                        <a href="https://www.instagram.com/pnsfstellamaris/ " target="_blank " class="a-redes ">@pnsfstellaaris</a>
                     </div>
-                    <div class="flex-inline-block">
-                        <a href="https://www.youtube.com/c/Par%C3%B3quiaNossaSenhoraF%C3%A1timaStellaMarisPNSF" target="_blank"> <img src="./img/youtube.svg" alt="YouTube">
+                    <div class="flex-inline-block ">
+                        <a href="https://www.youtube.com/c/Par%C3%B3quiaNossaSenhoraF%C3%A1timaStellaMarisPNSF " target="_blank "> <img src="./img/youtube.svg " alt="YouTube ">
                         </a>
-                        <a href="https://www.youtube.com/c/Par%C3%B3quiaNossaSenhoraF%C3%A1timaStellaMarisPNSF" target="_blank" class="a-redes">Coração da Imaculada</a>
+                        <a href="https://www.youtube.com/c/Par%C3%B3quiaNossaSenhoraF%C3%A1timaStellaMarisPNSF " target="_blank " class="a-redes ">Coração da Imaculada</a>
                     </div>
                 </div>
             </div>
@@ -177,6 +198,8 @@
     <footer>
         <h6><a href="https://www.linkedin.com/in/lucas-silva-9473b8208/ " target="_blank ">Lucas Nascimento Developer © 2022</a></h6>
     </footer>
+    <script src="https://kit.fontawesome.com/21617eeeb1.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
